@@ -51,19 +51,6 @@ body {
   margin-top: 18px;
 }
 
-.panel {
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 12px;
-  border-radius: 10px;
-  margin-top: 45px;
-
-}
-
-.panel h2 {
-  margin: 15px 0 30px 0;
-  font-size: 25px;
-}
 
 td {
   font-size: 18px;
@@ -85,6 +72,7 @@ td.titulo{
 td.valor{
   text-align: center;
   font-size: 22px;
+  width: 100px;
 }
 
 .input {
@@ -141,5 +129,30 @@ button {
   justify-content: center;
   margin-top: auto;
   
+}
+
+/*------------------------------------------*/
+
+
+.panel {
+  
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.panel h2 {
+  margin: 15px 0 30px 0;
+  font-size: 25px;
 }
 

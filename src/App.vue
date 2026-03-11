@@ -37,6 +37,9 @@
                         </div>
                             <td class="valor">R${{ item.value }}</td>
                             
+                            <td>
+                                <button class="small-btn" @click="removeExpense(item.id)">X</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -46,7 +49,21 @@
                 </div>
             </div>
             <div class="button">
-            <button>Adicionar Gastos</button>
+            <button @click="add">Adicionar Gastos</button>
+            </div>
+
+
+            <div class="panel" v-if="showAddPanel">
+                <div class="modal-content">
+                <h2>Adicionar despesa</h2>
+                <input v-model="title" class="input" placeholder="Descricao" />
+                <input v-model="value" class="input" placeholder="Valor" />
+                <input v-model="category" class="input" placeholder="Categoria" />
+                <div class="row">
+                    <button class="small-btn" @click="addExpense">Add</button>
+                    <button class="small-btn" @click="clearAll">Limpar tudo</button>
+                </div>
+                </div>
             </div>
     </div>
 </template>
@@ -101,5 +118,13 @@ function clearAll() {
         return;
     }
     expenses.value = [];
+}
+const showAddPanel = ref(false);
+function add() {
+    showAddPanel.value = true;
+}
+
+function closeAdd(){
+  showAdd.value = false
 }
 </script>
