@@ -44,16 +44,29 @@ body {
   color: #7c7c7c;
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 18px;
-  margin-top: 18px;
+.small-btn {
+  font-size: 11px;
+  padding: 4px 6px;
+  border: 1px solid #999;
+  background: #eee;
+  
+}
+
+
+
+
+.panel h2 {
+  margin: 50px 0 30px 0;
+  font-size: 25px;
 }
 
 
 td {
   font-size: 18px;
+}
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
 }
 table .info {
   border-bottom: 1px solid #eee;
@@ -82,19 +95,17 @@ td.valor{
   border: 1px solid #999;
   margin-bottom: 6px;
 }
-
-.row {
-  display: flex;
-  gap: 6px;
+.row button {
+  width: 350px;
+  color: white;
+  font-size: 32px;
+  padding: 15px 75px;
+  border-radius: 30px;
+  background-color: rgb(93, 141, 93);
+  margin-top: 90vw;
 }
 
-.small-btn {
-  font-size: 11px;
-  padding: 4px 6px;
-  border: 1px solid #999;
-  background: #eee;
-  cursor: pointer;
-}
+
 
 .table {
   width: 100%;
@@ -118,6 +129,7 @@ td.valor{
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
 button {
   border-radius: 30px;
   border: none;
@@ -133,9 +145,7 @@ button {
 
 /*------------------------------------------*/
 
-
-.panel {
-  
+.layout{
   background: #fff;
   border: 1px solid #ccc;
   padding: 12px;
@@ -146,13 +156,58 @@ button {
   width:100%;
   height:100%;
   display:flex;
-  justify-content:center;
-  align-items:center;
-
 }
 
-.panel h2 {
-  margin: 15px 0 30px 0;
-  font-size: 25px;
+.modal *:not(button):not(.custom-select):not(.option) {
+  margin-left: 20px;
 }
+
+.modal h2 {
+  margin: 15px 0 30px 20px;
+  font-size: 35px;
+}
+.modal input {
+  width: 350px;
+  margin: 10px 0 30px 20px;
+  font-size: 20px;
+}
+.modal label{
+ font-size: 20px;
+}
+
+
+
+.custom-select {
+  position: relative;
+  width: 370px;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.selected {
+  border: 1px solid #999;
+  padding: 15px 15px 15px 5px;
+  background: white;
+  font-size: 20px;
+  margin-top: 10px ;
+  
+}
+
+.options {
+  position: absolute;
+  width: 350px;
+  border: 1px solid #999;
+  background: white;
+  font-size: 20px;
+  padding: 0;
+  color: #555;
+}
+
+.option {
+  padding: 10px;
+  
+}
+
+
+
 
